@@ -44,6 +44,11 @@ SKIP: {
    my $yaml = eval { require YAML };
    skip "YAML not found", 2 unless $yaml;
 
+   # Require YAML 0.39 on Windows (reported by Andy Grundman)
+   if ($^O =~ m/^MSWin/i && ! defined eval { YAML->VERSION(0.39) }) {
+     skip "YAML >= 0.39 required on windows", 2;
+   }
+
    $out = YAML::Dump(scalar($qq->hash));
    report $out, "hash";
    is($out, $result{hash}, 'hash ok');
