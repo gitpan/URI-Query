@@ -1,0 +1,27 @@
+ChangeLog
+---------
+
+[2011-08-02]
+* Change t/t05/default from symlink to dup file, for mswin32.
+
+[2011-01-27]
+* Add ChangeLog to .gitignore.
+
+[2011-01-21]
+* Fix typo in URI::Query pod.
+* MANIFEST tweakage.
+* Add lots of nice pod.
+* Add support for cgi-packed-scalar-values, update unit tests.
+* Perldoc updates, and trailing whitespace pruning.
+* Add .gitignore; bump Test::More requirement to 0.88.
+* Add _init_from_arrayref method to Query, and unescape keys/values.
+* Add unescaping of keys and values in parse_qs, and unit test.
+* Remove all old arch-tags.
+
+[2010-01-20]
+* Upgrade use of uri_escape to uri_escape_utf8; bump version to 0.07.
+
+[2007-09-11]
+* Sort output hash key order for deterministic testing; bump to version 0.06.
+* Initial import, version 0.05.
+
