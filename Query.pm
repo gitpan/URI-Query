@@ -15,7 +15,7 @@ use overload
   'ne'  => sub { $_[0]->stringify ne $_[1]->stringify };
 
 use vars q($VERSION);
-$VERSION = '0.09';
+$VERSION = '0.10';
 
 # -------------------------------------------------------------------------
 # Remove all occurrences of the given parameters
@@ -71,7 +71,7 @@ sub stringify
     my $sep = shift || $self->{sep} || '&';
     my @out = ();
     for my $key (sort keys %{$self->{qq}}) {
-        for my $value (sort @{$self->{qq}->{$key}}) {
+        for my $value (@{$self->{qq}->{$key}}) {
             push @out, sprintf("%s=%s", uri_escape_utf8($key), uri_escape_utf8($value));
         }
     }

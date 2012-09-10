@@ -1,10 +1,15 @@
 ChangeLog
 ---------
 
+[2012-09-10]
+* Bump $VERSION to 0.10.
+* Remove value-based reordering in stringification.
+
 [2011-08-02]
-* Change t/t05/default from symlink to dup file, for mswin32.
 
 [2011-01-27]
+* Bump version to 0.09.
+* Change t/t05/default from symlink to dup, to avoid problems on windows etc.
 * Add ChangeLog to .gitignore.
 
 [2011-01-21]
